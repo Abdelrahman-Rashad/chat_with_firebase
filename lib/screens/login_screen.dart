@@ -112,8 +112,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const SizedBox(height: 16),
                     OutlinedButton.icon(
-                      onPressed: () {
-                        context.read<AuthCubit>().signInWithGoogle();
+                      onPressed: () async {
+                        await context.read<AuthCubit>().signInWithGoogle();
                       },
                       icon: Image.network(
                         'https://www.google.com/favicon.ico',
